@@ -48,5 +48,5 @@ To run this App execute two commands in Terminal:
 
 
 
-Test1234567
+Test
 
