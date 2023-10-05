@@ -50,4 +50,3 @@ To run this App execute two commands in Terminal:
 
 Test123456
 
-
