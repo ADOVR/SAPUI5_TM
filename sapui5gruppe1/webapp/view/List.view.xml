@@ -39,8 +39,8 @@
 					<items>
 						<ColumnListItem id="coulmnlistitem1" type="Navigation" press=".onListItemPress">
 							<cells>
-								<ObjectIdentifier id="obidentifier1" title="{mainmodel>Name}" text="{mainmodel>ID}"/>
-								<!-- <ObjectNumber id="objectnumber1"
+								<ObjectIdentifier id="obidentifier1" title="{mainmodel>Name}" />
+								<ObjectNumber id="objectnumber1"
 									number="{
 										parts:[
 											{path:'mainmodel>Price'},
@@ -49,7 +49,7 @@
 										type: 'sap.ui.model.type.Currency',
 										formatOptions: {showMeasure: false}
 									}"
-									unit="{mainmodel>Concurrency}"/> -->
+									unit="{mainmodel>Concurrency}"/> 
 							</cells>
 						</ColumnListItem>
 					</items>

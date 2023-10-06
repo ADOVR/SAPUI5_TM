@@ -34,7 +34,7 @@ sap.ui.define([
 		onSort: function () {
 			this._bDescendingSort = !this._bDescendingSort;
 			var oBinding = this.oProductsTable.getBinding("items"),
-				oSorter = new Sorter("Name", this._bDescendingSort);
+				oSorter = new Sorter("Price", this._bDescendingSort);
 
 			oBinding.sort(oSorter);
 		},
