@@ -37,19 +37,19 @@
 						</Column>
 					</columns>
 					<items>
-						<ColumnListItem id="coulmnlistitem1" type="Navigation">
+						<ColumnListItem id="coulmnlistitem1" type="Navigation" press=".onListItemPress">
 							<cells>
 								<ObjectIdentifier id="obidentifier1" title="{mainmodel>Name}" text="{mainmodel>ID}"/>
-								<!--<ObjectNumber
+								<!-- <ObjectNumber id="objectnumber1"
 									number="{
 										parts:[
-											{path:'products>Price'},
-											{path:'products>CurrencyCode'}
+											{path:'mainmodel>Price'},
+											{path:'mainmodel>Concurrency'}
 										],
 										type: 'sap.ui.model.type.Currency',
 										formatOptions: {showMeasure: false}
 									}"
-									unit="{products>CurrencyCode}"/> -->
+									unit="{mainmodel>Concurrency}"/> -->
 							</cells>
 						</ColumnListItem>
 					</items>
@@ -58,12 +58,12 @@
 		</f:content>
 
 		<!-- DynamicPage Footer -->
-		<!--<f:footer>
-			<OverflowToolbar>
-				<ToolbarSpacer/>
-				<Button type="Accept" text="Accept"/>
-				<Button type="Reject" text="Reject"/>
+		<f:footer>
+			<OverflowToolbar id="oftoolbar2">
+				<ToolbarSpacer id="toolbarspacer2"/>
+				<Button id="toolbarspacer2btn1" type="Accept" text="Accept"/>
+				<Button id="toolbarspacer2btn2" type="Reject" text="Reject"/>
 			</OverflowToolbar>
-		</f:footer>-->
+		</f:footer>
 	</f:DynamicPage>
 </mvc:View>
