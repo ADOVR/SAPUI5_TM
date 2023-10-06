@@ -1,4 +1,5 @@
 <mvc:View
+	controllerName="sapui5gruppe1.controller.Detail"
 	xmlns="sap.uxap"
 	xmlns:m="sap.m"
 	xmlns:f="sap.f"
@@ -17,7 +18,8 @@
 				<actions>
 					<m:ToggleButton id="dptogglebtn1"
 						text="Edit"
-						type="Emphasized"/>
+						type="Emphasized"
+						press=".onEditToggleButtonPress"/>
 					<m:Button id="dpbtn1"
 						text="Delete"
 						type="Transparent"/>
@@ -72,8 +74,15 @@
 					</ObjectPageSubSection>
 				</subSections>
 			</ObjectPageSection>
-
 		</sections>
+
+		<footer>
+			<m:OverflowToolbar id="oftoolbar1">
+				<m:ToolbarSpacer id="toolbarspacer1"/>
+				<m:Button id="toolbarspacer1btn1" type="Accept" text="Save"/>
+				<m:Button id="toolbarspacer1btn2" type="Reject" text="Cancel"/>
+			</m:OverflowToolbar>
+		</footer>
 
 	</ObjectPageLayout>
 </mvc:View>
