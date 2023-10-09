@@ -16,19 +16,9 @@
 		<headerTitle>
 			<ObjectPageDynamicHeaderTitle id="dpdynamicpagetitle1">
 				<actions>
-					<m:ToggleButton id="dptogglebtn1"
-						text="Edit"
-						type="Emphasized"
-						press=".onEditToggleButtonPress"/>
-					<m:Button id="dpbtn1"
-						text="Delete"
-						type="Transparent"/>
-					<m:Button id="dpbtn2"
-						text="Copy"
-						type="Transparent"/>
-					<m:Button id="dpbtn3"
-						icon="sap-icon://action"
-						type="Transparent"/>
+					<m:ToggleButton id="dpbtn1"
+						icon="sap-icon://cart"
+						type="Emphasized"/>
 				</actions>
 			</ObjectPageDynamicHeaderTitle>
 		</headerTitle>

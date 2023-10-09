@@ -19,7 +19,7 @@
 				<OverflowToolbar id="oftoolb1" class="sapFDynamicPageAlignContent">
 					<ToolbarSpacer id="toolbarspacer1"/>
 					<SearchField id="searchfield1" search=".onSearch" width="17.5rem"/>
-					<OverflowToolbarButton id="oftoolbarbtn1" icon="sap-icon://add" text="Add" type="Transparent" press=".onAdd"/>
+					<!--<OverflowToolbarButton id="oftoolbarbtn1" icon="sap-icon://add" text="Add" type="Transparent" press=".onAdd"/> -->
 					<OverflowToolbarButton id="oftoolbarbtn2" icon="sap-icon://sort" text="Sort" type="Transparent" press=".onSort"/>
 				</OverflowToolbar>
 				<Table
