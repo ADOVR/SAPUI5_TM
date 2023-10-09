@@ -27,10 +27,6 @@ sap.ui.define([
 			this.oProductsTable.getBinding("items").filter(oTableSearchState, "Application");
 		},
 
-		onAdd: function () {
-			MessageBox.information("This functionality is not ready yet.", {title: "Aw, Snap!"});
-		},
-
 		onSort: function () {
 			this._bDescendingSort = !this._bDescendingSort;
 			var oBinding = this.oProductsTable.getBinding("items"),

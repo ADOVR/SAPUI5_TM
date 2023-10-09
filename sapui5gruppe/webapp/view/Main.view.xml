@@ -1,0 +1,78 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:f="sap.f" xmlns:u="sap.uxap" xmlns:form="sap.ui.layout.form" 
+controllerName="sapui5gruppe.controller.Main" displayBlock="true">
+    <Page id="page" title="{i18n>title}">
+        <content>
+           <VBox width="100%" direction="Column" id="vbox2"/>
+           <SplitApp id="SplitApp">
+           <masterPages>
+                <Page id="MPPage1">
+                    <content>
+                        <VBox id="vbox1" fitContainer="true">
+                            <OverflowToolbar id="oftoolb1" class="sapFDynamicPageAlignContent">
+                                <ToolbarSpacer id="toolbarspacer1"/>
+                                <SearchField id="searchfield1" search=".onSearch" width="17.5rem"/>
+                                <OverflowToolbarButton id="oftoolbarbtn2" icon="sap-icon://sort" text="Sort" type="Transparent" press=".onSort"/>
+                            </OverflowToolbar>
+                            <Table id="productsTable" items="{mainmodel>/Products}" class="sapFDynamicPageAlignContent" width="auto" selectionChange=".onListItemPress" mode="SingleSelectMaster">
+                                <columns>
+                                    <Column id="column1" width="12em">
+                                        <Text id="column1text1" text="Produkte"/>
+                                    </Column>
+                                    <Column id="column2" hAlign="End">
+                                        <Text id="column2text1" text="Preis"/>
+                                    </Column>
+                                </columns>
+                                <items>
+                                    <ColumnListItem id="coulmnlistitem1" type="Navigation" >
+                                        <cells>
+                                            <ObjectIdentifier id="obidentifier1" title="{mainmodel>Name}"/>
+                                            <ObjectNumber id="objectnumber1" number="{                                                     parts:[                                                         {path:'mainmodel>Price'},                                                         {path:'mainmodel>Concurrency'}                                                     ],                                                     type: 'sap.ui.model.type.Currency',                                                     formatOptions: {showMeasure: false}                                                 }" unit="{mainmodel>Concurrency}"/> 
+                                        </cells>
+                                    </ColumnListItem>
+                                </items>
+                            </Table>
+                        </VBox>
+                    </content>
+                </Page>
+           </masterPages>
+           <detailPages>
+                <Page id="DPPage1">
+                    <content>
+                         <VBox id="VBox" class="sapUiSmallMargin">
+                            <form:SimpleForm id="SimpleFormDisplay354"
+                                editable="false"
+                                layout="ResponsiveGridLayout"
+                                title="Algemeine Informationen"
+                                labelSpanXL="3"
+                                labelSpanL="3"
+                                labelSpanM="3"
+                                labelSpanS="12"
+                                adjustLabelSpan="false"
+                                emptySpanXL="4"
+                                emptySpanL="4"
+                                emptySpanM="4"
+                                emptySpanS="0"
+                                columnsXL="1"
+                                columnsL="1"
+                                columnsM="1"
+                                singleContainerFullSize="false" >
+                                <form:content>
+                                    <Label id="lbl1" text="Name" />
+                                    <Text id="lbl1txt1" text="{Name}" ></Text>
+                                    <Label id="lbl2" text="Street/No." />
+
+                                    <Label id="lbl3" text="ZIP Code/City" />
+
+                                    <Label id="lbl4" text="Country" />
+
+                                </form:content>
+                            </form:SimpleForm>
+                        </VBox>
+                    </content> 
+                </Page>
+           </detailPages>
+           </SplitApp>
+           
+        </content>
+    </Page>
+</mvc:View>
