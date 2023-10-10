@@ -15,8 +15,10 @@ sap.ui.define([
 
         return Controller.extend("sapui5gruppe.controller.Main", {
             onInit: function () {
-                var oSplitApp = this.getView().byId("SplitApp");
-                oSplitApp.toDetail("__xmlview0--DPPage1","side");
+                //var oSplitApp = this.getView().byId("SplitApp");
+                //oSplitApp.toDetail("__xmlview0--DPPage1","side");
+                var oModel = new sap.ui.model.json.JSONModel();
+                this.getView().setModel(oModel, "detailModel");
 
             },
 
@@ -29,17 +31,11 @@ sap.ui.define([
             },
 
             onListItemPress: function (oEvent) {
-                var oItem = oEvent.getParameter("listItem");
-                var sPath = oItem.getBindingContext("mainmodel").getPath();
-                //var oView = oEvent.getSource().getParent().getParent().getParent().getParent().getParent().getParent();
-                //var oTable = oView.byId("productsTable");
-                var oTable = oEvent.getSource().getParent();
-                oTable.bindElement({
-                    path: sPath,
-                    parameters: {
-                        expand: "Supplier,Category"
-                    }
-                    });
+                var oSelectedItem = oEvent.getParameter("listItem");
+                var oBindingContext = oSelectedItem.getBindingContext();
+                var oDetailModel = this.getView().getModel("detailModel");
+
+                oDetailModel.setProperty("/SelectedItem", oBindingContext.getObject());
             }
         })
     }

@@ -26,7 +26,7 @@ controllerName="sapui5gruppe.controller.Main" displayBlock="true">
                                     <ColumnListItem id="coulmnlistitem1" type="Navigation" >
                                         <cells>
                                             <ObjectIdentifier id="obidentifier1" title="{mainmodel>Name}"/>
-                                            <ObjectNumber id="objectnumber1" number="{                                                     parts:[                                                         {path:'mainmodel>Price'},                                                         {path:'mainmodel>Concurrency'}                                                     ],                                                     type: 'sap.ui.model.type.Currency',                                                     formatOptions: {showMeasure: false}                                                 }" unit="{mainmodel>Concurrency}"/> 
+                                            <ObjectNumber id="objectnumber1" number="{parts:[{path:'mainmodel>Price'},{path:'mainmodel>Concurrency'}],type:'sap.ui.model.type.Currency',formatOptions: {showMeasure: false}}" unit="{mainmodel>Concurrency}"/> 
                                         </cells>
                                     </ColumnListItem>
                                 </items>
@@ -58,13 +58,7 @@ controllerName="sapui5gruppe.controller.Main" displayBlock="true">
                                 singleContainerFullSize="false" >
                                 <form:content>
                                     <Label id="lbl1" text="Name" />
-                                    <Text id="lbl1txt1" text="{Name}" ></Text>
-                                    <Label id="lbl2" text="Street/No." />
-
-                                    <Label id="lbl3" text="ZIP Code/City" />
-
-                                    <Label id="lbl4" text="Country" />
-
+                                    <Text id="lbl1txt1" text="{SelectedItem>Name}" ></Text>
                                 </form:content>
                             </form:SimpleForm>
                         </VBox>

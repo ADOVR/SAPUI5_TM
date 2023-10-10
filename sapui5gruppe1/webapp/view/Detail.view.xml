@@ -1,4 +1,4 @@
-<mvc:View
+<mvc:View xmlns:vbm="sap.ui.vbm"
 	controllerName="sapui5gruppe1.controller.Detail"
 	xmlns="sap.uxap"
 	xmlns:m="sap.m"
@@ -32,9 +32,11 @@
 				</m:Avatar>
 				<m:VBox id="dpvbox1" justifyContent="Center" class="sapUiSmallMarginEnd">
 					<m:Label id="dpvbox1lbl1" text="Kategorie"/>
+					<m:Text id="txt" text="Exotic Liquids" ></m:Text>
 				</m:VBox>
 				<m:VBox id="dpvbox2" justifyContent="Center" class="sapUiSmallMarginEnd">
 					<m:Label id="dpvbox2lbl1" text="Preis"/>
+					<m:Text id="dpvbox2lbl1txt1" text="{mainmodel>/Products(2)/Price}"/>
 				</m:VBox>
 			</m:FlexBox>
 		</headerContent>
@@ -55,9 +57,57 @@
 								columnsL="1"
 								columnsM="1">
 								<form:content>
-									<m:Label id="dpsection1lbl1" text="Produkt ID"/>
+									<m:Label id="dpsection1lbl1" text="Produktname"/>
+									<m:Text id="lbl1txt1" text="{mainmodel>/Products(2)/Name}"> </m:Text>
 									<m:Label id="dpsection1lbl2" text="Beschreibung"/>
-									<m:Label id="dpsection1lbl3" text="Lieferant"/>
+									<m:Text id="lbl1txt2" text="{mainmodel>/Products(2)/Description}"> </m:Text>
+								</form:content>
+							</form:SimpleForm>
+						</blocks>
+						<blocks>
+							<form:SimpleForm id="dpsection1simpleform2"
+								maxContainerCols="2"
+								editable="false"
+								layout="ResponsiveGridLayout"
+								labelSpanL="12"
+								labelSpanM="12"
+								emptySpanL="0"
+								emptySpanM="0"
+								columnsL="1"
+								columnsM="1">
+								<form:content>
+									<m:Label id="dpsection1lbl14" text="Ablaufdatum"/>
+									<m:Text id="lbl1txt14" text="{mainmodel>/Products(2)/DiscontinuedDate}"> </m:Text>
+									<m:Label id="dpsection1lbl15" text="Preis"/>
+									<m:Text id="lbl1txt15" text="{mainmodel>/Products(2)/Price}"> </m:Text>
+									<m:Label id="dpsection1lbl16" text="Bewertung"/>
+									<m:RatingIndicator id="lbl11ri" value="{mainmodel>/Products(2)/Rating}"/>
+								</form:content>
+							</form:SimpleForm>
+						</blocks>
+						</ObjectPageSubSection>
+						<ObjectPageSubSection id="test2">
+						<blocks>
+							<form:SimpleForm id="dpsection2simpleform1"
+								maxContainerCols="2"
+								editable="false"
+								layout="ResponsiveGridLayout"
+								labelSpanL="12"
+								labelSpanM="12"
+								emptySpanL="0"
+								emptySpanM="0"
+								columnsL="1"
+								columnsM="1">
+								<form:content>
+									<m:Label id="lbl1" text="Bestellmenge" />
+									<m:HBox id="test3">
+									<m:Input id="input1" width="200px"/>
+									<m:ToggleButton id="dpbtn2"
+										width="200px"
+										text="Order"
+										icon="sap-icon://cart"
+										type="Emphasized"/>
+									</m:HBox>
 								</form:content>
 							</form:SimpleForm>
 						</blocks>
